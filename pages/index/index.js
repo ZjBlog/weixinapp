@@ -67,7 +67,7 @@ Page({
         })
       },
       complete: function () {
-        console.info('完成')
+        console.info('完成66666')
       },
       fail: () => {
         console.info('llllllllllllllllll66666666666666')
