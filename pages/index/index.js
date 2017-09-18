@@ -8,8 +8,6 @@ Page({
     primarySize: 'default',
     plain: false,
     loading: false,
-    lat: 0,
-    lng: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -46,32 +44,5 @@ Page({
   },
   getLocation () {
     console.info('地理位置')
-    wx.getLocation({
-      success: function(res) {
-        console.info('成功')
-        console.info(res)
-        const { latitude, longitude } = res
-        // var latitude = res.latitude
-        // var longitude = res.longitude
-        var url = 'https://api.map.baidu.com/geocoder/v2/?location=' + latitude + ',' + longitude +'&output=json&pois=1&ak=Iv2nkWeGF4U8RSepS4urOMms'
-        wx.request({
-          url: url,
-          dataType: 'json',
-          success: function (res) {
-            console.info(res.data.result.addressComponent.province)
-            console.info(res.data.result.addressComponent.city)
-            console.info(res.data.result.addressComponent.district)
-            console.info(res.data.result.addressComponent.country)
-            console.info('99999999999999999')
-          }
-        })
-      },
-      complete: function () {
-        console.info('完成66666')
-      },
-      fail: () => {
-        console.info('llllllllllllllllll66666666666666')
-      }
-    })
-  } 
+  }
 })

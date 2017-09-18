@@ -16,6 +16,22 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function getDate(){
+  let date = new Date()
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let day = date.getDate()
+  return `${year}-${month}-${day}`
+}
+function getYesterdayDate() {
+  let date = new Date()
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let day = date.getDate() - 1
+  return `${year}-${month}-${day}`
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getDate: getDate,
+  getYesterdayDate
 }

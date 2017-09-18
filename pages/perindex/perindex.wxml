@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container1">
+  <swiper indicator-dots class="swi" indicator-color="rgba(19,206,102,1)" indicator-active-color="#F7BA2A">
+    <block wx:for="{{img}}" wx:key="*this">
+      <swiper-item class="swi">
+        <image src="{{item}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

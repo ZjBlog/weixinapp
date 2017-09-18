@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/perindex/perindex"
   ],
   "window":{
     "navigationBarBackgroundColor": "#20A0FF",
