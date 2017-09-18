@@ -9,5 +9,10 @@ Page({
     this.setData({
       img: app.globalData.img
     })
+  },
+  start () {
+    // wx.showLoading({
+    //   title: '加载中'
+    // })
   }
 })

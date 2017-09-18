@@ -40,6 +40,7 @@ App({
     let vm = this
     let obj = {}
     requsetForGet(in_theaters_url, params).then((res)=>{
+      vm.globalData.img = []
       res.data.subjects.forEach((value) => {
         vm.globalData.img.push(value.images.large)
       })

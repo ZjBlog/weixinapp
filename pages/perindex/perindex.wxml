@@ -4,6 +4,7 @@
     <block wx:for="{{img}}" wx:key="*this">
       <swiper-item class="swi">
         <image src="{{item}}"/>
+        <button class="btn" bindtap="start" wx:if="{{ index == img.length - 1 }}">Go >>></button>
       </swiper-item>
     </block>
   </swiper>
