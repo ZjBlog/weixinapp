@@ -1,4 +1,4 @@
-const { getDate, getYesterdayDate} = require('./utils/util')
+const { getDate, getYesterdayDate, isExpire} = require('./utils/util')
 const weixin = require('./utils/weixin')
 const { getCityName } = require('./utils/baidu')
 const in_theaters_url = 'https://api.douban.com/v2/movie/in_theaters'
@@ -9,8 +9,7 @@ App({
     let vm = this
     //查看缓存中的数据 失效时间为一天
     weixin.getStorage('index').then((res)=>{
-      console.info(res.data.time)
-      if (getDate() === res.data.time) {
+      if (isExpire(res.data.time)) {
         vm.globalData.img = res.data.img
       } else {
         vm.initData()
@@ -27,11 +26,11 @@ App({
     weixin.getLocation().then((res)=>{
       return getCityName(res.latitude, res.longitude)
     }).then((res)=>{
-      const params = { city: res.substring(0, res.length - 1), count: 5 }
+      const params = { city: res.substring(0, res.length - 1), count: 3 }
       vm.getImage(params)
       }).catch(()=>{
       console.info('shibai')
-      const params = { city: '北京', count: 5 }
+      const params = { city: '北京', count: 3 }
       vm.getImage(params)
     })
   },
