@@ -7,7 +7,8 @@ const { requsetForGet } = require('../../utils/request')
 var app = getApp()
 Page({
   data: {
-    img: []
+    img: [],
+    flag: false
   },
   onLoad: function () {
     console.log('onLoad')
@@ -36,9 +37,9 @@ Page({
   },
   //初始化数据
   initData() {
-    wx.showLoading({
-      title: '加载中',
-    })
+    // wx.showLoading({
+    //   title: '加载中',
+    // })
     let vm = this
     console.info('初始化数据')
     weixin.getLocation().then((res) => {
@@ -63,8 +64,9 @@ Page({
       })
       return tem
     }).then((res) => {
-      wx.hideLoading()
+      // wx.hideLoading()
       vm.setData({
+        flag: true,
         img: res
       })
       console.info('获取图片成功')
@@ -73,7 +75,11 @@ Page({
       console.info(obj)
       weixin.setStorage('index', obj)
     }).catch(() => {
-      wx.hideLoading()
+      vm.setData({
+        flag: true,
+        img: ['https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2494093630.webp']
+      })
+      // wx.hideLoading()
       console.info('获取图片失败')
       obj.time = getYesterdayDate()
       obj.img = ['https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2494093630.webp']

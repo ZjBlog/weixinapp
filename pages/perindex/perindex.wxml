@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container1">
+<view class="container-per" wx:if="{{flag}}">
   <swiper indicator-dots indicator-color="rgba(19,206,102,1)" indicator-active-color="#F7BA2A">
     <block wx:for="{{img}}" wx:key="*this">
       <swiper-item >
@@ -8,4 +8,7 @@
       </swiper-item>
     </block>
   </swiper>
+</view>
+<view class="container" wx:else>
+99999
 </view>

@@ -1,6 +1,6 @@
 /**index.wxss**/
 swiper{height:100%}
-.container1 {
+.container-per {
   height: 100%;
 }
 image {
