@@ -1,9 +1,22 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+ <import src="../templates/star/star.wxml"/>
+<!--demo.wxml-->
+<view class="container-movie" wx:for="{{movieList}}" wx:key="index">
+  <view class="container-text">
+    <view>
+      <image class="img-icon" src='/images/icon/icon.jpg'></image><text class="text-font">{{item.title}}</text>
+    </view>
+     <text class="text-font">更多>></text>
   </view>
-  <view class="usermotto">
-    <navigator url="/pages/perindex/perindex" hover-class="navigator-hover">首页</navigator>    
+  <view class='container-scroll'>
+    <scroll-view scroll-x style="width: 100%">
+        <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
+          <view class='scroll-view-item_X'>
+            <image src='{{img.imgUrls}}' class="scroll-img"></image>
+            <text class='text-title text-font'>{{img.title}}</text>
+            {{img.rating.average}}-{{img.rating.stars}}-{{img.rating.stars%10}}
+            <template is="starTemplate" data="{{score:img.rating.average,stars:img.rating.stars,rem:img.rating.stars%10}}"></template>          
+          </view>
+        </block>
+    </scroll-view>
   </view>
-</view>
+</view> 

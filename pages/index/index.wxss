@@ -1,21 +1,39 @@
-/**index.wxss**/
-.userinfo {
+@import '../templates/star/star.wxss';
+.container-text{
   display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  margin:0px 20rpx;
+}
+.img-icon{
+  width: 8rpx;
+  height: 32rpx;
+  vertical-align:middle;
+}
+/*view-scroll 横向滚动*/
+.container-scroll{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+.scroll-view-item_X {
+  display:inline-flex;
   flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.scroll-img{
+  width: 280rpx;
+  height: 400rpx;
+  margin: 0rpx 20rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.text-title{
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:280rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.text-font{
+  font-weight: bold;
 }

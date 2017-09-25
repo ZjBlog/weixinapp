@@ -1,0 +1,13 @@
+<template name="starTemplate">
+  <view class="stars-container">
+    <view class="stars" wx:if="{{score}}">
+      <block wx:for="{{5}}" wx:for-item="i" wx:key="index">
+          <image wx:if="{{(index+1)*10<=stars}}" src="/images/star/star.png"></image>
+          <image wx:elif="{{index*10+rem==stars && (rem==4 || rem ==5 || rem == 6)}}" src="/images/star/half-star.png"></image>
+          <image wx:elif="{{index*10+rem==stars && (rem==7 || rem == 8 || rem == 9)}}" src="/images/star/star.png"></image> 
+          <image wx:else src="/images/star/none-star.png"></image>  
+      </block>
+    </view>
+    <text class="star-score">{{score==0?'暂无评分':score}}</text>
+  </view>
+</template>

@@ -8,6 +8,7 @@ image {
   width: 100%;
 }
 .btn {
+  display: block;
   bottom: 200rpx;
   width: 300rpx;
   background-color: rgba(19, 206, 102, 0);
