@@ -16,3 +16,10 @@ image {
   border: 4rpx solid #F7BA2A;
   font-size: 28rpx;
 }
+.container-img {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
