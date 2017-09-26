@@ -3,12 +3,13 @@
   display: flex;
   display: -webkit-flex;
   justify-content: space-between;
-  margin:0px 20rpx;
+  margin:0px 20rpx 20rpx 20rpx;
 }
 .img-icon{
   width: 8rpx;
   height: 32rpx;
   vertical-align:middle;
+  margin-top: -6rpx;
 }
 /*view-scroll 横向滚动*/
 .container-scroll{
@@ -23,8 +24,8 @@
   align-items: center;
 }
 .scroll-img{
-  width: 280rpx;
-  height: 400rpx;
+  width: 200rpx;
+  height: 285rpx;
   margin: 0rpx 20rpx;
 }
 .text-title{
@@ -32,8 +33,19 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width:280rpx;
+  width:200rpx;
 }
 .text-font{
   font-weight: bold;
+}
+.container-text{
+  margin-top: 20rpx;
+}
+.header{
+  background-color: #20A0FF;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
 }
