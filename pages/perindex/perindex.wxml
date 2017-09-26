@@ -10,5 +10,5 @@
   </swiper>
 </view>
 <view class="container-img" wx:else  style='background-color: #e9ebf4;'>
-  <image src='../../images/icon/loading.gif' style="width: 250rpx; height: 250rpx;" ></image>
+  <image src='../../images/icon/loading.svg' style="width: 250rpx; height: 250rpx;" ></image>
 </view>

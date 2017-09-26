@@ -10,13 +10,14 @@ Page({
     img: [],
     flag: false
   },
-  onLoad: function () {
-    console.log('onLoad')
+  onLoad: function (options) {
+    console.log('onLoad index')
     let vm = this
     //查看缓存中的数据 失效时间为一天
     weixin.getStorage('index').then((res) => {
       if (isExpire(res.data.time)) {
         vm.setData({
+          flag: true,
           img: res.data.img
         })
       } else {
@@ -85,5 +86,32 @@ Page({
       obj.img = ['https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2494093630.webp']
       weixin.setStorage('index', obj)
     })
+  },
+  onReady: function () {
+    // Do something when page ready.
+    console.log('ready index')
+  },
+  onShow: function () {
+    // Do something when page show.
+    console.log('show index')
+  },
+  onHide: function () {
+    // Do something when page hide.
+    console.log('hide index')
+  },
+  onUnload: function () {
+    // Do something when page close.
+  },
+  onPullDownRefresh: function () {
+    // Do something when pull down.
+  },
+  onReachBottom: function () {
+    // Do something when page reach bottom.
+  },
+  onShareAppMessage: function () {
+    // return custom share data when user share.
+  },
+  onPageScroll: function () {
+    // Do something when page scroll
   }
 })

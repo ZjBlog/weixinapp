@@ -1,9 +1,21 @@
 //app.js
 App({
-  onLaunch: function() {
+  onLaunch: function (options) {
     console.info('进入小程序')
+    console.info(options)
     // 测试时
     wx.clearStorage()
+  },
+  onShow: function (options) {
+    // Do something when show.
+    console.info('App show')
+  },
+  onHide: function () {
+    // Do something when hide.
+    console.info('App hide')
+  },
+  onError: function (msg) {
+    console.log(msg)
   },
   getUserInfo: function(cb) {
     var that = this
