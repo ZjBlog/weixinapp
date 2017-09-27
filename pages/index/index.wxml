@@ -1,24 +1,39 @@
  <import src="../templates/star/star.wxml"/>
 <view class="header">
-好好学习天天向上好好学习天天向上16
+{{ana}}
  </view>
 <!--demo.wxml-->
-<view class="container-movie" wx:for="{{movieList}}" wx:key="index">
+<view class="container-movie" >
+<view wx:for="{{movieList}}" wx:key="index">
   <view class="container-text">
     <view>
       <image class="img-icon" src='/images/icon/icon.jpg'></image><text class="text-font">{{item.title}}</text>
     </view>
-     <text class="text-font">更多>></text>
+     <text class="text-font text-color" data-more="{{item.url}}" catchtap="more">更多>></text>
   </view>
   <view class='container-scroll'>
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
-          <view class='scroll-view-item_X' wx:if="{{item.url != 'https://api.douban.com/v2/movie/us_box'}}">
+          <view class='scroll-view-item_X'>
             <image src='{{img.images.large}}' class="scroll-img"></image>
             <text class='text-title text-font'>{{img.title}}</text>
             <template is="starTemplate" data="{{score:img.rating.average,stars:img.rating.stars,rem:img.rating.stars%10}}"></template>          
           </view>
-          <view class='scroll-view-item_X' wx:else>
+        </block>
+    </scroll-view>
+  </view>
+</view>
+<view>
+  <view class="container-text">
+    <view>
+      <image class="img-icon" src='/images/icon/icon.jpg'></image><text class="text-font">{{item.title}}{{item.date}}</text>
+    </view>
+     <text class="text-font text-color" data-more="{{item.url}}" catchtap="more">更多>></text>
+  </view>
+  <view class='container-scroll'>
+    <scroll-view scroll-x style="width: 100%">
+        <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
+          <view class='scroll-view-item_X' wx:if="{{index<10}}">
             <image src='{{img.subject.images.large}}' class="scroll-img"></image>
             <text class='text-title text-font'>{{img.subject.title}}</text>
             <template is="starTemplate" data="{{score:img.subject.rating.average,stars:img.subject.rating.stars,rem:img.subject.rating.stars%10}}"></template>          
@@ -26,4 +41,7 @@
         </block>
     </scroll-view>
   </view>
+</view>
+
+
 </view> 

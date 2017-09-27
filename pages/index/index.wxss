@@ -43,9 +43,12 @@
 }
 .header{
   background-color: #20A0FF;
-  height: 60rpx;
+  min-height: 60rpx;
   text-align: center;
   line-height: 60rpx;
   color: #FFFFFF;
   font-size: 32rpx;
+}
+.text-color{
+  color: #20A0FF;
 }

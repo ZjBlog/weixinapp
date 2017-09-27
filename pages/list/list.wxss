@@ -1,0 +1,7 @@
+@import '../templates/star/star.wxss';
+.header{
+  background-color: #20A0FF;
+  min-height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}

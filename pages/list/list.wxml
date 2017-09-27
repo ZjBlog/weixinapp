@@ -1,0 +1,4 @@
+ <import src="../templates/star/star.wxml"/>
+<view class="header">
+{{ana}}
+ </view>
