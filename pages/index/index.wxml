@@ -3,7 +3,8 @@
 {{ana}}
  </view>
 <!--demo.wxml-->
-<view class="container-movie" >
+<view class="container-movie">
+
 <view wx:for="{{movieList}}" wx:key="index">
   <view class="container-text">
     <view>
@@ -11,7 +12,7 @@
     </view>
      <text class="text-font text-color" data-more="{{item.url}}" catchtap="more">更多>></text>
   </view>
-  <view class='container-scroll'>
+  <view class='container-scroll' wx:if="{{item.subjects}}">
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
           <view class='scroll-view-item_X'>
@@ -22,6 +23,10 @@
         </block>
     </scroll-view>
   </view>
+  <view wx:else class="sc-img-con">
+    <image src='/images/icon/ld.svg' class='sc-img'></image>
+  </view>
+
 </view>
 <view>
   <view class="container-text">
@@ -30,7 +35,7 @@
     </view>
      <text class="text-font text-color" data-more="{{item.url}}" catchtap="more">更多>></text>
   </view>
-  <view class='container-scroll'>
+  <view class='container-scroll'  wx:if="{{item.subjects}}">
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
           <view class='scroll-view-item_X' wx:if="{{index<10}}">
@@ -41,6 +46,10 @@
         </block>
     </scroll-view>
   </view>
+  <view wx:else class="sc-img-con">
+    <image src='/images/icon/ld.svg' class='sc-img'></image>
+  </view>
+
 </view>
 
 

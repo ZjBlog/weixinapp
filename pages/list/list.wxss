@@ -5,3 +5,45 @@
   text-align: center;
   line-height: 60rpx;
 }
+.container-list{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.con-scroll {
+  height: 100%;
+}
+.scroll-view-item_X {
+  display:inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.scroll-img{
+  width: 200rpx;
+  height: 285rpx;
+}
+.text-title{
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:200rpx;
+}
+.text-font{
+  font-weight: bold;
+}
+.ld{
+  width: 104rpx;
+  height: 104rpx;
+}
+.ls-bg{
+  display: flex;
+  display: -webkit-flex;
+  background-color: #e9ebf4;
+  justify-content: center;
+  align-items: center;
+  height: 104rpx;
+}

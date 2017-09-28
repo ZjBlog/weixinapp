@@ -2,3 +2,20 @@
 <view class="header">
 {{ana}}
  </view>
+ <view>
+    <view class="container-list">
+          <block wx:for="{{subjects}}" wx:key="index">
+            <view class='scroll-view-item_X'>
+              <image src='{{item.images.large}}' class="scroll-img"></image>
+              <text class='text-title text-font'>{{item.title}}</text>
+              <template is="starTemplate" data="{{score:item.rating.average,stars:item.rating.stars,rem:item.rating.stars%10}}"></template>         
+            </view>
+          </block>
+    </view>
+ </view>
+ <view class='ls-bg' wx:if='{{loading}}'>
+  <image class='ld' src='/images/icon/ld.svg'></image>
+</view>
+<view class='ls-bg' wx:if='{{down}}'>
+  <text style='color:#20A0FF'>客官,真没了</text>
+</view>
