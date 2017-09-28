@@ -11,23 +11,36 @@ Page({
     down: false,
     total: 0,
     url: '',
-    height: 0
+    height: 0,
+    item:{},
+    flag: true
   },
   //生命周期函数--监听页面加载
   onLoad: function (options) {
     console.info('onLoad')
+    wx.showLoading({
+      title: '加载中',
+    })
+    let vm = this
     let type = options.type
+    if ('us_box' == type){
+      this.setData({
+        flag: false
+      })
+      getStorage('us').then(res => {
+        console.info('cache us')
+          vm.setData({
+            item: res.data.us
+          })
+      }).catch(() => {
+        console.info('失败')
+      })
+      wx.hideLoading()
+      return
+    }
+    console.info('不是us')
     let url = `https://api.douban.com/v2/movie/${type}`
     this.data.url = url
-    let vm = this
-    wx.getSystemInfo({
-      success: function (res) {
-        console.log(res.windowHeight)
-        vm.setData({
-          height: res.windowHeight
-        })
-      }
-    })
     this.init()
   },
   init() {
@@ -48,6 +61,7 @@ Page({
       vm.setData({
         loading: false
       })
+      wx.hideLoading()
     })
 
   },
