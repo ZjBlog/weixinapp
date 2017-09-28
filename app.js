@@ -4,7 +4,7 @@ App({
     console.info('进入小程序')
     console.info(options)
     // 测试时
-    wx.clearStorage()
+    //wx.clearStorage()
   },
   onShow: function (options) {
     // Do something when show.

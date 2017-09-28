@@ -15,6 +15,7 @@ Page({
     let vm = this
     //查看缓存中的数据 失效时间为一天
     weixin.getStorage('index').then((res) => {
+      console.info(res.data.time)
       if (isExpire(res.data.time)) {
         vm.setData({
           flag: true,
