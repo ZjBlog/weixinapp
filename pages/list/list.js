@@ -23,7 +23,23 @@ Page({
     })
     let vm = this
     let type = options.type
+    if ('in_theaters'==type){
+      wx.setNavigationBarTitle({
+        title: '正在上映电影'
+      })
+    } else if ('coming_soon'==type){
+      wx.setNavigationBarTitle({
+        title: '即将上映电影'
+      })
+    } else if ('top250'==type){
+      wx.setNavigationBarTitle({
+        title: 'Top250电影'
+      })
+    }
     if ('us_box' == type){
+      wx.setNavigationBarTitle({
+        title: '北美票房榜'
+      })
       this.setData({
         flag: false
       })
