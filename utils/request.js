@@ -27,7 +27,7 @@ function requsetForPost(url, params) {
     })
   })
 }
-function requsetForGetUs(url, params) {
+function requsetForGetUs(url, params={}) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: url,
