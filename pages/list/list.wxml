@@ -5,7 +5,7 @@
  <view wx:if="{{flag}}">
     <view class="container-list">
           <block wx:for="{{subjects}}" wx:key="index">
-            <view class='scroll-view-item_X'>
+            <view class='scroll-view-item_X' catchtap='detail' data-id="{{item.id}}">
               <image src='{{item.images.large}}' class="scroll-img"></image>
               <text class='text-title text-font'>{{item.title}}</text>
               <template is="starTemplate" data="{{score:item.rating.average,stars:item.rating.stars,rem:item.rating.stars%10}}"></template>         
@@ -16,7 +16,7 @@
  <view wx:if="{{!flag}}">
     <view class="container-list">
           <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
-            <view class='scroll-view-item_X'>
+            <view class='scroll-view-item_X' catchtap='detail' data-id="{{img.subject.id}}">
               <image src='{{img.subject.images.large}}' class="scroll-img"></image>
               <text class='text-title text-font'>{{img.subject.title}}</text>
               <template is="starTemplate" data="{{score:img.subject.rating.average,stars:img.subject.rating.stars,rem:img.subject.rating.stars%10}}"></template> 

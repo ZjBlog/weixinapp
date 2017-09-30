@@ -1,0 +1,146 @@
+@import '../templates/star/star.wxss';
+.header{
+  height: 340rpx;
+}
+.bg{
+  height: 340rpx;
+background-color: rgba(0,0,0,0.5);
+}
+.img{
+  width: 200rpx;
+  height: 285rpx;
+  margin-left: 30rpx;
+  margin-top: 100rpx;
+  float:left;
+}
+
+.font{
+  float:left;
+  margin-top:150rpx;
+  color:#fff;
+  margin-left:40rpx;
+}
+
+.font-star{
+  clear:both;
+}
+
+.font-star .text{
+  float:left;
+}
+
+.font-star .star{
+  float:left;
+}
+.font-text{
+  font-size: 36rpx;
+}
+.font-a{
+  font-size: 44rpx;
+}
+.stars image {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.star{
+  margin-left:10rpx;
+}
+
+.f{
+  display: block;
+  margin-top:-8rpx;
+  font-size:24rpx;
+  color:#D3DCE6;
+}
+.star-score{
+  color: #D3DCE6
+}
+.con-text{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction:column;
+  margin-left: 30rpx;
+}
+.title{
+  align-self: flex-end;
+  font-size: 28rpx;
+  color: #20A0FF;
+  margin-right: 20rpx;
+}
+.fr{
+  float: right;
+  margin-right: 20rpx;
+}
+.fr text{
+  font-size: 32rpx;
+  color: #475669;
+}
+.dd{
+  font-family:MicroSoft Yahei;
+  font-size: 32rpx;
+}
+page{
+  background-color: #e9ebf4;
+}
+.ff{
+  color: #20A0FF;
+}
+.line{
+  margin-top: 20rpx;
+  border-top: 2rpx solid #D3DCE6;
+}
+.jq{
+ margin-top: 20rpx;
+ margin-left: 20rpx;
+}
+
+/*view-scroll 横向滚动*/
+.container-scroll{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    white-space: nowrap;
+    margin-top:40rpx;
+    padding-bottom: 40rpx;
+}
+.scroll-view-item_X {
+  display:inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll-img{
+  width: 200rpx;
+  height: 285rpx;
+  margin: 0rpx 20rpx;
+}
+
+.img-name{
+  font-size:24rpx;
+  margin-top:10rpx;
+}
+
+.dd{
+  font-size:28rpx;
+  color:#1F2D3D;
+}
+
+.ff{
+  font-size:28rpx;
+  color:#1F2D3D;
+}
+
+.font-right{
+  font-size:28rpx !important;
+  color:#1F2D3D;
+}
+
+.jianjie{
+  font-size:24rpx;
+  color:#1F2D3D;
+  text-indent: 40rpx;
+  display: block;
+  margin-top:-10px;
+  padding:0 18rpx;
+  line-height:40rpx;
+}

@@ -4,6 +4,8 @@
   min-height: 60rpx;
   text-align: center;
   line-height: 60rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
 }
 .container-list{
   display: flex;

@@ -2,7 +2,8 @@
   "pages":[
     "pages/perindex/perindex",
     "pages/index/index",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/detail/detail"
   ],
   "window":{
     "navigationBarBackgroundColor": "#20A0FF",

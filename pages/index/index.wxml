@@ -15,7 +15,7 @@
   <view class='container-scroll' wx:if="{{item.subjects}}">
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
-          <view class='scroll-view-item_X'>
+          <view class='scroll-view-item_X' catchtap='detail' data-id="{{img.id}}">
             <image src='{{img.images.large}}' class="scroll-img"></image>
             <text class='text-title text-font'>{{img.title}}</text>
             <template is="starTemplate" data="{{score:img.rating.average,stars:img.rating.stars,rem:img.rating.stars%10}}"></template>          
@@ -38,7 +38,7 @@
   <view class='container-scroll'  wx:if="{{item.subjects}}">
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.subjects}}" wx:key="index" wx:for-item="img">
-          <view class='scroll-view-item_X' wx:if="{{index<10}}">
+          <view class='scroll-view-item_X' wx:if="{{index<10}}" catchtap='detail' data-id="{{img.subject.id}}">
             <image src='{{img.subject.images.large}}' class="scroll-img"></image>
             <text class='text-title text-font'>{{img.subject.title}}</text>
             <template is="starTemplate" data="{{score:img.subject.rating.average,stars:img.subject.rating.stars,rem:img.subject.rating.stars%10}}"></template>          

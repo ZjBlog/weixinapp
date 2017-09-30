@@ -90,5 +90,11 @@ Page({
     wx.navigateTo({
       url: '/pages/list/list?type=' + url
     })
+  },
+  detail(event){
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id
+    })
   }
 })
