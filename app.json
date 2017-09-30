@@ -11,7 +11,7 @@
     "navigationBarTextStyle":"black",
     "backgroundColor":"#99A9BF",
     "backgroundTextStyle":"light",
-    "enablePullDownRefresh": "true",
+    "enablePullDownRefresh": "false",
     "disableScroll":"true",
     "onReachBottomDistance":"50"
   }
