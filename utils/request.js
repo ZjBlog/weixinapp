@@ -2,6 +2,7 @@
  * 微信请求
  */
 function requsetForGet (url,params={}) {
+
   return new Promise((resolve,reject) => {
     wx.request({
       url: url,
