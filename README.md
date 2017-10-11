@@ -1,4 +1,4 @@
-# weixinapp
-微信小程序 Demo
+# 影之讯
+微信小程序
 仿豆瓣评分小程序
-![qc](./qc.jpg)
+![qc](./qc.jpg) ![qc](./qc1.jpg)
