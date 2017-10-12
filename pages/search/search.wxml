@@ -1,0 +1,43 @@
+<import src="/pages/templates/wxSearch/wxSearch.wxml"/>
+<import src="../templates/star/star.wxml"/>
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" confirm-type='search' bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" focus bindblur="wxSearchBlur" class="wxSearch-input" placeholder="请输入关键词" bindconfirm='wxSearchFn' />
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/>
+<view class='con-serach' wx:if="{{init || wxSearchData.view.isShow}}">
+  <image style="width:200px;height:200px;" src="/images/search.svg"  />
+</view>
+<view  wx:if="{{title && !wxSearchData.view.isShow}}">
+  <view class='title-con'>
+    <text class='title'>{{title}}</text>
+  </view>
+  <view class='result-search' wx:if='{{subjects.length>0}}'>
+    <block wx:for="{{subjects}}" wx:key="index">
+      <view class='item-result'>
+        <image src='{{item.images.large}}' class='img-serch'></image>
+        <view class='star-con-title'>
+          <template is="starTemplate" data="{{score:item.rating.average,stars:item.rating.stars,rem:item.rating.stars%10}}"></template>
+          <text class='res-movie-title'>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if='{{subjects.length==0&&!loading}}' class='no-result'>
+      <image src='/images/nono.png' class='no-result-img' mode='aspectFit'></image>
+      <text>抱歉,没有搜到相关电影</text>
+  </view>
+</view>
+
+
+ <view class='ls-bg' wx:if='{{loading &&!wxSearchData.view.isShow}}'>
+  <image class='ld' src='/images/icon/ld.svg'></image>
+</view>
+
+
+<view class='ls-bg' wx:if='{{down}}'>
+  <text style='color:#20A0FF'>客官,真没了</text>
+</view>
+

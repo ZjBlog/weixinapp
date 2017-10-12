@@ -38,7 +38,7 @@
 <view class='container-scroll'>
     <scroll-view scroll-x style="width: 100%">
         <block wx:for="{{item.casts}}" wx:key="index" wx:for-item="img">
-          <view class='scroll-view-item_X'>
+          <view class='scroll-view-item_X' catchtap='person' data-id="{{img.id}}">
             <image src='{{img.avatars.large}}' class="scroll-img"></image>
             <text class='img-name'>{{img.name}}</text>     
           </view>

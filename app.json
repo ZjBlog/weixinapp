@@ -1,9 +1,12 @@
 {
   "pages":[
     "pages/perindex/perindex",
+    "pages/search/search",
     "pages/index/index",
     "pages/list/list",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/am/am",
+    "pages/person/person"
   ],
   "window":{
     "navigationBarBackgroundColor": "#20A0FF",
@@ -14,5 +17,30 @@
     "enablePullDownRefresh": "false",
     "disableScroll":"true",
     "onReachBottomDistance":"50"
+  },
+  "tabBar": {
+    "selectedColor": "#20A0FF",
+    "color": "#767676",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab/01.png",
+        "selectedIconPath": "/images/tab/011.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "/images/tab/03.png",
+        "selectedIconPath": "/images/tab/033.png"
+      },
+      {
+        "pagePath": "pages/am/am",
+        "text": "我",
+        "iconPath": "/images/tab/02.png",
+        "selectedIconPath": "/images/tab/022.png"
+      }
+    ]
   }
 }

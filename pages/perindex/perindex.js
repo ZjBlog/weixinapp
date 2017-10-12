@@ -29,13 +29,13 @@ Page({
     })
   },
   start () {
-    wx.navigateTo({
-      url: '/pages/index/index'
-    })
-    // 有tab的时候有这个代码
-    // wx.switchTab({
+    // wx.navigateTo({
     //   url: '/pages/index/index'
     // })
+    // 有tab的时候有这个代码
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
   },
   //初始化数据
   initData() {

@@ -1,0 +1,57 @@
+@import '../templates/star/star.wxss';
+page{
+  background-color: #e9ebf4;
+}
+.img{
+  width: 240rpx;
+  height: 343rpx;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  margin-bottom: 40rpx;
+  float: left;
+}
+.name{
+  display: block;
+  font-weight: bolder;
+  font-size: 36rpx;
+  margin-top: 110rpx;
+  margin-left: 40rpx;
+}
+.name-other{
+  display: block;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.intro{
+  float: left;
+}
+.con-movie{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.line{
+  clear: both;
+}
+.movie-img{
+  width: 200rpx;
+  height: 280rpx;
+
+}
+.m-con{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.title{
+  text-overflow: ellipsis;
+  width:200rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dai{
+  margin-left: 20rpx;
+}

@@ -1,0 +1,27 @@
+<!--am.wxml-->
+<view wx:if='{{hasUserInfo}}' class="header">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class="header" wx:else>
+    <image  class="userinfo-avatar" src="/images/logo.png" background-size="cover"></image>
+    <text class="userinfo-nickname">影讯</text>
+</view>
+<text class='history'>浏览历史</text>
+<view class='container-scroll' wx:if='{{subjects.length>0}}'>
+  <scroll-view scroll-x style="width: 100%">
+      <block wx:for="{{subjects}}" wx:key="index">
+          <image src='{{item.img}}' class="scroll-img" catchtap='detail' data-id='{{item.id}}'></image>        
+      </block>
+  </scroll-view>
+</view>
+<view wx:else class='no-result'>
+    <image src='/images/nono.png' class='no-result-img'></image>
+    <view class='btn-area' bindtap='go'>
+      <text class='te'>快去浏览吧>></text>
+    </view>
+</view>
+<view class='no-result1'>
+    <image src='/images/json.jpg' class='no-result-img'></image>
+    <button wx:if="canIUse" size='mini' type='primary' open-type="contact" plain>开始撩他</button>
+</view>

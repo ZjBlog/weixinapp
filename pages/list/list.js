@@ -100,5 +100,11 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + id
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '影之讯',
+      path: 'pages/index/index'
+    }
   }
 })
