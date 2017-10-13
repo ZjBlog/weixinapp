@@ -35,7 +35,7 @@ Page({
   },
   detail(event) {
     let id = event.currentTarget.dataset.id
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/detail/detail?id=' + id
     })
   },

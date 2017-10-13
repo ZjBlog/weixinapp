@@ -196,5 +196,11 @@ Page({
       title: '影之讯',
       path: 'pages/index/index'
     }
+  },
+  detail (event) {
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id
+    })
   }
 })

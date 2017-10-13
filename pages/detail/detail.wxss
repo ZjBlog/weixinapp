@@ -143,4 +143,5 @@ page{
   margin-top:-10px;
   padding:0 18rpx;
   line-height:40rpx;
+  word-wrap: break-word;
 }

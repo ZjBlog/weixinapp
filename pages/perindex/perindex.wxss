@@ -11,9 +11,8 @@ image {
   display: block;
   bottom: 200rpx;
   width: 300rpx;
-  background-color: rgba(19, 206, 102, 0);
+  background-color: rgba(102, 102, 102, 0.8);
   color: #13CE66;
-  border: 4rpx solid #F7BA2A;
   font-size: 28rpx;
 }
 .container-img {

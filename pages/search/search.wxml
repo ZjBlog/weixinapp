@@ -16,7 +16,7 @@
   </view>
   <view class='result-search' wx:if='{{subjects.length>0}}'>
     <block wx:for="{{subjects}}" wx:key="index">
-      <view class='item-result'>
+      <view class='item-result' data-id='{{item.id}}' catchtap='detail'>
         <image src='{{item.images.large}}' class='img-serch'></image>
         <view class='star-con-title'>
           <template is="starTemplate" data="{{score:item.rating.average,stars:item.rating.stars,rem:item.rating.stars%10}}"></template>
