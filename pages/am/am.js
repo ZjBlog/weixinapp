@@ -28,6 +28,9 @@ Page({
       console.info('shibai')
     })
   },
+  del () {
+    wx.clearStorage()
+  },
   go () {
     wx.switchTab({
       url: '/pages/index/index'

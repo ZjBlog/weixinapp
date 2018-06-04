@@ -29,7 +29,7 @@
 </view>
 <view class="line"></view>
 <view class='dd jq'>
-    剧情简介 :
+    剧情简介 : 
 </view>
 <text class='jianjie'>
 {{item.summary}}

@@ -22,6 +22,5 @@
     </view>
 </view>
 <view class='no-result1'>
-    <image src='/images/json.jpg' class='no-result-img'></image>
-    <button wx:if="canIUse" size='mini' type='primary' open-type="contact" plain>开始撩他</button>
+    <image src='/images/icon/loading1.gif' class='no-result-img'></image>
 </view>

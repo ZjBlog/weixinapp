@@ -11,7 +11,7 @@ function getStorage(key) {
 
 function getLocation(type = 'wgs84') {
   return new Promise((resolved, rejected) => {
-    wx.getLocation({ type: type,success: resolved, fail: rejected })
+    wx.getLocation({ type: type, success: resolved,fail:rejected})
   })
 }
 

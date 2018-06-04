@@ -16,6 +16,9 @@ Page({
       title: '加载中',
     })
     let id = options.id
+    console.log('...........')
+    console.log(id)
+    console.log('...........')
     this.data.id = id
     this.init(id)
   },
@@ -31,6 +34,7 @@ Page({
         flag: true
       })
       vm.history(res.data.images.large,res.data.id)
+      console.info(res.data.images.large)
     })
   },
   history(img,id) {

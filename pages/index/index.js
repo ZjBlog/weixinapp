@@ -1,10 +1,12 @@
 const { requsetForGet, requsetForGetUs } = require('../../utils/request')
 const { getAna } = require('../../utils/ana')
-const { setStorage,getStorage} = require('../../utils/weixin')
+const { setStorage, getStorage, getLocation} = require('../../utils/weixin')
 const { getDate, isExpire} = require('../../utils/util')
+const { getCityName } = require('../../utils/baidu') 
 Page({
   data: {
     title: 'urlDemo',
+    city: '北京',
     movieList: [
       { url: 'https://api.douban.com/v2/movie/in_theaters' },
       { url: 'https://api.douban.com/v2/movie/coming_soon' },
@@ -17,25 +19,43 @@ Page({
   },
   //生命周期函数--监听页面加载
   onLoad: function () {
+    getLocation().then(res=>{
+      getCityName(res.latitude, res.longitude).then(res=>{
+        console.info(res)
+        this.setData({
+          city: res
+        })
+        this.initAll()
+      })
+    }).catch(res=>{
+      getCityName(res.latitude, res.longitude).then(res => {
+        console.info(res)
+        this.setData({
+          city: res
+        })
+        this.initAll()
+      })
+    })
+  },
+  initAll () {
     this.initus()
-    let vm =this
-    getStorage('mlist').then(res=>{
+    let vm = this
+    getStorage('mlist').then(res => {
       if (isExpire(res.data.time)) {
         console.info('cache mlist')
         vm.setData({
           movieList: res.data.mlist
         })
-      }else {
+      } else {
         vm.initMovies()
       }
-    }).catch(()=>{
+    }).catch(() => {
       vm.initMovies()
     })
-
   },
   initMovies () {
     let allPromises = this.data.movieList.map(m => {
-      return requsetForGet(m.url, { count: 10 }).then((res) => {
+      return requsetForGet(m.url, { count: 10,city:this.data.city }).then((res) => {
         m.title = res.data.title
         m.subjects = res.data.subjects
         return m

@@ -1,11 +1,10 @@
 {
   "pages":[
-    "pages/perindex/perindex",
-    "pages/search/search",
     "pages/index/index",
     "pages/list/list",
     "pages/detail/detail",
     "pages/am/am",
+    "pages/search/search",
     "pages/person/person"
   ],
   "window":{
@@ -14,7 +13,7 @@
     "navigationBarTextStyle":"black",
     "backgroundColor":"#99A9BF",
     "backgroundTextStyle":"light",
-    "enablePullDownRefresh": "false",
+    "enablePullDownRefresh": false,
     "disableScroll":"true",
     "onReachBottomDistance":"50"
   },
