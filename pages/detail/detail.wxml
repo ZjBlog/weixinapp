@@ -27,6 +27,8 @@
 <view class='dd'>类型 :  <text class='ff' wx:for="{{item.genres}}" wx:key="*this" wx:for-item="gen">{{gen}}{{(index<item.genres.length-1?'、':'')}}</text>
 </view>
 </view>
+<view class="line" style='margin-bottom:20rpx;'></view>
+<van-button size="large" type="primary" round="true" bind:click="go">点击查看</van-button>
 <view class="line"></view>
 <view class='dd jq'>
     剧情简介 : 

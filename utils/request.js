@@ -2,7 +2,8 @@
  * 微信请求
  */
 function requsetForGet (url,params={}) {
-
+  // params.apikey = '054022eaeae0b00e0fc068c0c0a2102a'
+  params.apikey = '0b2bdeda43b5688921839c8ecb20399b'
   return new Promise((resolve,reject) => {
     wx.request({
       url: url,
@@ -29,7 +30,7 @@ function requsetForPost(url, params) {
   })
 }
 function requsetForGetUs(url, params={}) {
-
+  params.apikey = '0b2bdeda43b5688921839c8ecb20399b'
   return new Promise((resolve, reject) => {
     wx.request({
       url: url,

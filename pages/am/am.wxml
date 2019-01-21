@@ -1,11 +1,7 @@
 <!--am.wxml-->
-<view wx:if='{{hasUserInfo}}' class="header">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-</view>
-<view class="header" wx:else>
-    <image  class="userinfo-avatar" src="/images/logo.png" background-size="cover"></image>
-    <text class="userinfo-nickname">影讯</text>
+<view class="header">
+<open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+<open-data type="userNickName" class="userinfo-nickname"></open-data>
 </view>
 <text class='history'>浏览历史</text>
 <view class='container-scroll' wx:if='{{subjects.length>0}}'>

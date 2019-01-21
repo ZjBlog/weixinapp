@@ -82,5 +82,11 @@ Page({
       title: '影之讯',
       path: '/pages/detail/detail?id=' + this.data.id
     }
+  },
+  go: function () {
+    wx.navigateToMiniProgram({
+      appId: 'wx422c6208e20233ce',
+      path: "pages/search/search?keyword=" + this.data.item.title
+    })
   }
 })

@@ -1,3 +1,7 @@
 {
+    "usingComponents": {
+      "van-notice-bar": "../../components/notice-bar/index",
+      "wux-floating-button": "../../components/floating-button/index"
+    },
   "navigationBarTitleText": "电影列表"
 }

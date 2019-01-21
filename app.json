@@ -41,5 +41,11 @@
         "selectedIconPath": "/images/tab/022.png"
       }
     ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx749b024776cd21cb"
+  ],
+  "networkTimeout": {
+    "request": 5000
   }
 }

@@ -1,10 +1,14 @@
- <import src="../templates/star/star.wxml"/>
+<import src="../templates/star/star.wxml"/>
 <view class="header">
 {{ana}}
  </view>
+ <van-notice-bar bind:click="go" color="#20A0FF"
+  left-icon="/images/volume.png"
+  text="号外号外,半个橙子影院上线了,可以在线观看电影,点击查看》》"
+/>
+<wux-floating-button position="{{ position }}" buttons="{{ buttons }}" bind:click="go"  />
 <!--demo.wxml-->
 <view class="container-movie">
-
 <view wx:for="{{movieList}}" wx:key="index">
   <view class="container-text">
     <view>
@@ -53,4 +57,4 @@
 </view>
 
 
-</view> 
+</view>

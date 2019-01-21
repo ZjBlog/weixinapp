@@ -9,6 +9,8 @@ const {requsetForGet} = require('./request')
 function getCityName(lat = 39.9, lon = 116.3) {
   const params = { location: `${lat},${lon}`, output: 'json', ak: 'Iv2nkWeGF4U8RSepS4urOMms'}
   return requsetForGet(url, params).then(res => 
-    res.data.result.addressComponent.city.replace('市',''))
+    res.data.result.addressComponent.city.replace('市','')).catch(res=>{
+      console.info(res)
+    })
 }
 module.exports = { getCityName: getCityName}
