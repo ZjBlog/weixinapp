@@ -47,5 +47,10 @@
   ],
   "networkTimeout": {
     "request": 5000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取本地电影信息"
+    }
   }
 }
